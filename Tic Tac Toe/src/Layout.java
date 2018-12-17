@@ -1,7 +1,7 @@
 public class Layout {
     private Map map;
-    int nuliukai = 5;
-    int kryziukai = 6;
+    private int nuliukai = 5;
+    private int kryziukai = 6;
 
     public void printLayout(Map map) {
         this.map = map;
@@ -22,9 +22,9 @@ public class Layout {
                         System.out.print(" ");
                     } else if (map.getCoords(i, j) == 3) {
                         System.out.print("|");
-                    } else if (map.getCoords(i, j) == nuliukai) {
+                    } else if (map.getCoords(i, j) == getNuliukai()) {
                         System.out.print("O");
-                    } else if (map.getCoords(i, j) == kryziukai) {
+                    } else if (map.getCoords(i, j) == getKryziukai()) {
                         System.out.print("X");
                     }
                 }
@@ -32,5 +32,13 @@ public class Layout {
             }
             System.out.println();
         }
+    }
+
+    public int getNuliukai() {
+        return nuliukai;
+    }
+
+    public int getKryziukai() {
+        return kryziukai;
     }
 }
